@@ -47,6 +47,8 @@ extension RenderNode: Indexable {
             kind = .article
         case .symbol:
             kind = .symbol
+        case .unknown:
+            kind = .unknown
         }
         
         guard let title = metadata.title, !title.isEmpty else {

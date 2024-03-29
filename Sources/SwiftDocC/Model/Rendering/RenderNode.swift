@@ -256,6 +256,7 @@ public struct RenderNode: VariantContainer {
         case tutorial = "project"
         case section
         case overview
+        case unknown
         
         public init(from decoder: Decoder) throws {
             let container = try decoder.singleValueContainer()
@@ -272,7 +273,7 @@ public struct RenderNode: VariantContainer {
                 self = .overview
                 
             case let unknown:
-                throw DecodingError.dataCorruptedError(in: container, debugDescription: "Unknown RenderNode.Kind: '\(unknown)'.")
+                self = .unknown
             }
         }
     }

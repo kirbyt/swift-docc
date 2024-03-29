@@ -129,6 +129,9 @@ extension RenderNode {
                 return NavigatorIndex.PageType(role: role)
             }
             return NavigatorIndex.PageType.symbol
+        case .unknown:
+            // The default page type is symbol, so do the same here.
+            return NavigatorIndex.PageType.symbol
         }
     }
     

@@ -56,6 +56,9 @@ public struct IndexingRecord: Equatable {
         
         /// A symbol page.
         public static let symbol = Kind(rawValue: "symbol")
+        
+        /// An unknown page.
+        public static let unknown = Kind(rawValue: "unknown")
     }
     
     /**
